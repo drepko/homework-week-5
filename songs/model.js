@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db')
-//const Playlist = require('../playlist/model')
-
+const Playlist = require('../playlists/model')
 
 const Song = sequelize.define('songs', {
   playlistId: {
@@ -29,7 +28,6 @@ const Song = sequelize.define('songs', {
   
 })
 
-
-//Song.belongsTo(Playlist)
+Song.belongsTo(Playlist)
 
 module.exports = Song

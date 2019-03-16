@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db')
-//const Song = require('../songs/model')
+const Song = require('../songs/model')
 
 
 const Playlist = sequelize.define('playlists', {
@@ -8,8 +8,11 @@ const Playlist = sequelize.define('playlists', {
     type: Sequelize.STRING,
     field: 'name',
     allowNull: false
-  }
+  },
 })
 
 //Playlist.hasMany(Song)
+        
+  
 module.exports = Playlist
+
