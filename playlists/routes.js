@@ -32,7 +32,7 @@ router.get('/playlists/:id', auth, (req, res, next) => {
     Playlist
         .findByPk(req.params.id,
            //{include: [Song]}
-        )
+        )        
         .then(playlist => {
             if (!playlist) {
                 return res.status(404).send({

@@ -2,7 +2,6 @@ const Sequelize = require('sequelize')
 const sequelize = require('../db')
 const Song = require('../songs/model')
 
-
 const Playlist = sequelize.define('playlists', {
   name: {
     type: Sequelize.STRING,
@@ -12,6 +11,6 @@ const Playlist = sequelize.define('playlists', {
 })
 
 //Playlist.hasMany(Song)
-          
+
 module.exports = Playlist
 
