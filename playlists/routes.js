@@ -31,8 +31,8 @@ router.get('/playlists', auth, (req, res, next) => {
 router.get('/playlists/:id', auth, (req, res, next) => {
     Playlist
         .findByPk(req.params.id,
-           //{include: [Song]}
-        )        
+            //{include: [Song]}
+        )
         .then(playlist => {
             if (!playlist) {
                 return res.status(404).send({
@@ -44,7 +44,7 @@ router.get('/playlists/:id', auth, (req, res, next) => {
         .catch(error => next(error))
 })
 
-router.post('/playlists/:id/songs', auth,  (req, res, next) => {
+router.post('/playlists/:id/songs', auth, (req, res, next) => {
     Playlist
         .findByPk(req.params.id)
         .then(playlist => {
@@ -55,10 +55,10 @@ router.post('/playlists/:id/songs', auth,  (req, res, next) => {
                 album: album,
                 playlistId: playlist.id
             })
-            return song    
+            return song
 
         })
-        .then(song => {return res.status(201).send(song)})
+        .then(song => { return res.status(201).send(song) })
         .catch(error => console.log(error))
 })
 

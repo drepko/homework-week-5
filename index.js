@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const songsRouter = require('./songs/routes')
 const playlistsRouter = require('./playlists/routes')
-const usersRouter = require ('./users/routes')
+const usersRouter = require('./users/routes')
 const jwtRouter = require('./auth/routes')
 
 const app = express()
@@ -16,5 +16,5 @@ app
 
 
 
-  
+
 
