@@ -12,7 +12,6 @@ const Playlist = sequelize.define('playlists', {
 })
 
 //Playlist.hasMany(Song)
-        
-  
+          
 module.exports = Playlist
 
