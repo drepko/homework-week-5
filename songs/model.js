@@ -23,7 +23,12 @@ const Song = sequelize.define('songs', {
     field: 'album',
     allowNull: false
   }
+}, {  
+  timestamps: false,
+    tableName: 'songs'
+  
 })
+
 
 //Song.belongsTo(Playlist)
 
