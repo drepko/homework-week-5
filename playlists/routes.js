@@ -31,7 +31,7 @@ router.get('/playlists', auth, (req, res, next) => {
 router.get('/playlists/:id', auth, (req, res, next) => {
     Playlist
         .findByPk(req.params.id,
-            //{include: [Song]}
+            {include: [Song]}
         )
         .then(playlist => {
             if (!playlist) {
